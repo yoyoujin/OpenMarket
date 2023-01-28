@@ -9,6 +9,13 @@
 ## 2. 배포서버 & 테스트계정
 
 ## 3. 개발환경
+정적 코드 분석 도구 : Eslint
+
+Code Formatter : Prettier
+
+이슈 관리 : Github-Issues (Feature, Error 템플릿 사용)
+
+브랜치 전략 : Git-flow
 
 ## 4. 컨벤션
 
