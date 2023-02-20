@@ -1,51 +1,43 @@
-import { createGlobalStyle } from "styled-components";
-import { reset } from "styled-reset";
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
 
-export const GlobalStyle = createGlobalStyle`
-${reset}
-:root {
-  --main-color: #21BF48;
-}
-*{
-  box-sizing:border-box;
-}
-html,
-body {
-  font-family: "SpoqaHanSans", sans-serif;
-  font-weight: 400;
-}
-a{
-  
-  text-decoration: none;
-  color:black;
-  
-}
-.hidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%); 
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-}
-button{
-    background: inherit;
-    border:none;
-    box-shadow:none;
-    border-radius:0;
-    padding:0;
-    overflow:visible;
-    cursor:pointer;
-    font: inherit;
-    
-  }
-  a {
-    color: #fff; 
-    text-decoration: none; 
-    outline: none
+const Globalstyle = createGlobalStyle`
+  ${reset}
+  * {
+        font-family: "Spoqa Han Sans Neo", sans-serif;
+        font-weight: 400;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    html, body {
+        font-family: "Spoqa Han Sans Neo", sans-serif;
+        font-weight: 400;
+        box-sizing: border-box;
+    }
+    .ir {
+        position: absolute;
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        clip-path: inset(0 0 0 0);
+    }
+    a {
+        text-decoration: none;
+    }
+    button {
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+    }
+    :root {
+    --main-color : #21BF48;
+    --main-text-color : #333333;
+    --greyC4: #c4c4c4;
+    --grey76 : #767676;
+    --greyDB : #dbdbdb;
   }
 `;
+
+export default Globalstyle;

@@ -1,50 +1,38 @@
 module.exports = {
-    env: {
-      browser: true,
-      es2021: true,
-      node: true,
-    },
-    extends: [
-      'plugin:react/recommended',
-      'airbnb',
-      'plugin:prettier/recommended',
-      'prettier',
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: ['airbnb-base', 'plugin:prettier/recommended'],
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: 'module',
+  },
+  rules: {
+    'no-new': 'off',
+    'no-console': 'off',
+    'no-alert': 'off',
+    'no-plusplus': 'error',
+    'no-param-reassign': 'error',
+    'no-underscore-dangle': 'off',
+    'no-return-assign': 'error',
+    'max-depth': ['error', 2],
+    'max-lines-per-function': ['error', 15],
+    'import/extensions': ['off'],
+    'import/prefer-default-export': 'off',
+    'no-restricted-syntax': [
+      'error',
+      'ForInStatement',
+      'LabeledStatement',
+      'WithStatement',
     ],
-    overrides: [],
-    parserOptions: {
-      ecmaFeatures: {
-        jsx: true,
+    'import/no-extraneous-dependencies': [
+      'off',
+      {
+        devDependencies: false,
+        optionalDependencies: false,
+        peerDependencies: false,
       },
-      ecmaVersion: 12,
-      sourceType: 'module',
-    },
-    plugins: ['react', 'prettier'],
-    rules: {
-      'react/jsx-boolean-value': 0,
-      'react/prop-types': 'off',
-      'react/jsx-uses-react': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react/jsx-filename-extension': [
-        'error',
-        {
-          extensions: ['.js', '.jsx'],
-        },
-      ],
-      'react/function-component-definition': [
-        2,
-        {
-          namedComponents: 'arrow-function',
-          unnamedComponents: 'arrow-function',
-        },
-      ],
-      'prettier/prettier': [
-        'error',
-        {
-          singleQuote: true,
-          endOfLine: 'auto',
-          trailingComma: 'all',
-        },
-      ],
-      'no-console': 'off',
-    },
-  };
+    ],
+  },
+};
