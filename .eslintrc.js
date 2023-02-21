@@ -2,36 +2,57 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    node: true,
   },
-  extends: ['airbnb-base', 'plugin:prettier/recommended'],
+  extends: [
+    'plugin:react/recommended',
+    'airbnb',
+    'plugin:prettier/recommended',
+    'prettier',
+  ],
+  overrides: [],
   parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
     ecmaVersion: 12,
     sourceType: 'module',
   },
+  plugins: ['react', 'prettier'],
   rules: {
-    'no-new': 'off',
-    'no-console': 'off',
-    'no-alert': 'off',
-    'no-plusplus': 'error',
-    'no-param-reassign': 'error',
-    'no-underscore-dangle': 'off',
-    'no-return-assign': 'error',
-    'max-depth': ['error', 2],
-    'max-lines-per-function': ['error', 15],
-    'import/extensions': ['off'],
-    'import/prefer-default-export': 'off',
-    'no-restricted-syntax': [
+    'react/jsx-boolean-value': 0,
+    'react/prop-types': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'import/no-unresolved': 'off',
+    'no-else-return': 'off',
+    'react/jsx-filename-extension': [
       'error',
-      'ForInStatement',
-      'LabeledStatement',
-      'WithStatement',
-    ],
-    'import/no-extraneous-dependencies': [
-      'off',
       {
-        devDependencies: false,
-        optionalDependencies: false,
-        peerDependencies: false,
+        extensions: ['.js', '.jsx'],
+      },
+    ],
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
+    'prettier/prettier': [
+      'error',
+      {
+        jsxSingleQuote: true,
+        singleQuote: true,
+        endOfLine: 'auto',
+        trailingComma: 'all',
+      },
+    ],
+    'no-console': 'off',
+    'jsx-a11y/label-has-associated-control': [
+      2,
+      {
+        labelAttributes: ['htmlFor'],
       },
     ],
   },

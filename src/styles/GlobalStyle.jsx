@@ -14,8 +14,9 @@ const Globalstyle = createGlobalStyle`
         font-family: "Spoqa Han Sans Neo", sans-serif;
         font-weight: 400;
         box-sizing: border-box;
+        font-size: 10px;
     }
-    .ir {
+    .hidden {
         position: absolute;
         overflow: hidden;
         width: 1px;
@@ -30,6 +31,7 @@ const Globalstyle = createGlobalStyle`
         border: none;
         cursor: pointer;
         background-color: transparent;
+        font: inherit;
     }
     :root {
     --main-color : #21BF48;
