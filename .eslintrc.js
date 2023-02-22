@@ -48,6 +48,12 @@ module.exports = {
         trailingComma: 'all',
       },
     ],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        projectDependencies: false,
+      },
+    ],
     'no-console': 'off',
     'jsx-a11y/label-has-associated-control': [
       2,
