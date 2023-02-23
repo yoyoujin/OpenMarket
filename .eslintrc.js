@@ -1,65 +1,20 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    node: true,
-  },
+  parser: '@typescript-eslint/parser', // Specifies the ESLint parser
   extends: [
-    'plugin:react/recommended',
-    'airbnb',
-    'plugin:prettier/recommended',
-    'prettier',
+    'plugin:react/recommended', // Uses the recommended rules from @eslint-plugin-react
+    'plugin:@typescript-eslint/recommended', // Uses the recommended rules from @typescript-eslint/eslint-plugin
   ],
-  overrides: [],
   parserOptions: {
+    ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
+    sourceType: 'module', // Allows for the use of imports
     ecmaFeatures: {
-      jsx: true,
+      jsx: true, // Allows for the parsing of JSX
     },
-    ecmaVersion: 12,
-    sourceType: 'module',
   },
-  plugins: ['react', 'prettier'],
-  rules: {
-    'react/jsx-boolean-value': 0,
-    'react/prop-types': 'off',
-    'react/jsx-uses-react': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'import/no-unresolved': 'off',
-    'no-else-return': 'off',
-    'react/jsx-filename-extension': [
-      'error',
-      {
-        extensions: ['.js', '.jsx'],
-      },
-    ],
-    'react/function-component-definition': [
-      2,
-      {
-        namedComponents: 'arrow-function',
-        unnamedComponents: 'arrow-function',
-      },
-    ],
-    'prettier/prettier': [
-      'error',
-      {
-        jsxSingleQuote: true,
-        singleQuote: true,
-        endOfLine: 'auto',
-        trailingComma: 'all',
-      },
-    ],
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        projectDependencies: false,
-      },
-    ],
-    'no-console': 'off',
-    'jsx-a11y/label-has-associated-control': [
-      2,
-      {
-        labelAttributes: ['htmlFor'],
-      },
-    ],
+  rules: {},
+  settings: {
+    react: {
+      version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
+    },
   },
 };
