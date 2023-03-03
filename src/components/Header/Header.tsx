@@ -1,10 +1,11 @@
 import React from 'react';
 import Logo from '../../assets/images/Logo-hodu.png';
+import { HeaderWrapper, InnerHeader } from './Styled';
 
 const Header = () => {
   return (
-    <header>
-      <div>
+    <HeaderWrapper>
+      <InnerHeader>
         <h1>
           <img src={Logo} alt="호두마켓 로고 이미지" />
         </h1>
@@ -20,8 +21,8 @@ const Header = () => {
             <img src="" alt="" /> 로그인
           </div>
         </div>
-      </div>
-    </header>
+      </InnerHeader>
+    </HeaderWrapper>
   );
 };
 
