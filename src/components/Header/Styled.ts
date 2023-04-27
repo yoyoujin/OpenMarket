@@ -1,5 +1,6 @@
 import { InnerWrapper } from './../Wrapper/InnerWrapper';
 import styled from 'styled-components';
+import searchIcon from '../../assets/images/icon-search.svg';
 
 export const HeaderWrapper = styled.header`
   width: 100%;
@@ -34,13 +35,34 @@ export const InnerHeader = styled(InnerWrapper)`
       border-radius: 50px;
 
       &::placeholder {
-        font-size: 1.6rem;
-        line-height: 2rem;
+        font-size: 1.4rem;
+        line-height: 2em;
       }
     }
     > .search-btn {
       width: 28px;
       height: 28px;
+      background: url(${searchIcon}) no-repeat;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      right: 22px;
+    }
+  }
+
+  .header-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    margin-left: auto;
+
+    p {
+      margin-top: 4px;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      text-align: center;
+      color: var(--grey76);
     }
   }
 `;

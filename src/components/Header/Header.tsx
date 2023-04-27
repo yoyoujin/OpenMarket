@@ -1,6 +1,9 @@
 import React from 'react';
 import Logo from '../../assets/images/Logo-hodu.png';
 import { HeaderWrapper, InnerHeader } from './Styled';
+import shoppingCartIcon from '../../assets/images/icon-shopping-cart.svg';
+import userIcon from '../../assets/images/icon-user.svg';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -15,10 +18,14 @@ const Header = () => {
         </form>
         <div className="header-icons">
           <div>
-            <img src="" alt="" /> 장바구니
+            <img src={shoppingCartIcon} alt="" />
+            <p>장바구니</p>
           </div>
           <div>
-            <img src="" alt="" /> 로그인
+            <Link to="login">
+              <img src={userIcon} alt="" />
+              <p>로그인</p>
+            </Link>
           </div>
         </div>
       </InnerHeader>
